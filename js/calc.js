@@ -7,10 +7,10 @@ let numberselect = 0,
 let numbers = document.querySelectorAll("#numb-btn").forEach((numbbtn) => {
   numbbtn.addEventListener("click", () => {
     numberselect = Number(numbbtn.textContent);
-    if (numbscreen.value <= 0) {
-      numbscreen.value = "";
+    if (numbscreen.textContent <= "0") {
+      numbscreen.textContent = "";
     }
-    numbscreen.value += numberselect;
+    numbscreen.textContent += numberselect;
     if (operator == "") numberswrites += numberselect;
     if (operator == "+" || operator == "-" || operator == "*" || operator == "/") {
       numberswrites2 += numberselect;
@@ -20,9 +20,9 @@ let numbers = document.querySelectorAll("#numb-btn").forEach((numbbtn) => {
 
 let operbtn = document.querySelectorAll("#oper-simb").forEach((operbtn) => {
   operbtn.addEventListener("click", () => {
-    if ((operator == "+" && numberswrites2 == "") || (operator == "-" && numberswrites2 == "") || (operator == "*" && numberswrites2 == "") || (operator == "/" && numberswrites2 == "")) numbscreen.value = numbscreen.value.slice(0, -1);
+    if ((operator == "+" && numberswrites2 == "") || (operator == "-" && numberswrites2 == "") || (operator == "*" && numberswrites2 == "") || (operator == "/" && numberswrites2 == "")) numbscreen.textContent = numbscreen.textContent.slice(0, -1);
     operator = operbtn.textContent;
-    numbscreen.value += operator;
+    numbscreen.textContent += operator;
     numberswrites2 = "";
   });
 });
@@ -47,19 +47,19 @@ const dvd = () => {
 let operatorequal = document.querySelector("#oper-simb-equal");
 operatorequal.addEventListener("click", () => {
   if (operator == "+") {
-    numbscreen.value = suma();
+    numbscreen.textContent = suma();
     numberswrites = `${suma()}`;
   }
   if (operator == "-") {
-    numbscreen.value = resta();
+    numbscreen.textContent = resta();
     numberswrites = `${resta()}`;
   }
   if (operator == "*") {
-    numbscreen.value = mltp();
+    numbscreen.textContent = mltp();
     numberswrites = `${mltp()}`;
   }
   if (operator == "/") {
-    numbscreen.value = dvd();
+    numbscreen.textContent = dvd();
     numberswrites = `${dvd()}`;
   }
   numberswrites2 = "";
@@ -69,7 +69,7 @@ operatorequal.addEventListener("click", () => {
 
 let operbtnreset = document.getElementById("oper-btn-reset");
 operbtnreset.addEventListener("click", () => {
-  numbscreen.value = 0;
+  numbscreen.textContent = 0;
   countnumberscreen = 0;
   numberswrites = "";
   operator = "";
@@ -80,10 +80,10 @@ let operbtndelet = document.getElementById("oper-btn-delet");
 operbtndelet.addEventListener("click", () => {
   if (operator != "") {
     numberswrites2 = numberswrites2.slice(0, -1);
-    numbscreen.value = numbscreen.value.slice(0, -1);
+    numbscreen.textContent = numbscreen.textContent.slice(0, -1);
   } else {
     numberswrites = numberswrites.slice(0, -1);
-    numbscreen.value = numbscreen.value.slice(0, -1);
+    numbscreen.textContent = numbscreen.textContent.slice(0, -1);
   }
-  if (numbscreen.value == "") numbscreen.value = 0;
+  if (numbscreen.textContent == "") numbscreen.textContent = 0;
 });
