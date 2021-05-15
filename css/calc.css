@@ -1,0 +1,93 @@
+:root {
+  --ligth-main-color: #1083d6;
+  --ligth-title-color: #2a3b47;
+  --ligth-text-color: #697477;
+  --ligth-light-text-color: #a0a7ac;
+  --ligth-border-color: #eff3f5;
+  --ligth-container-color: #ffffff;
+  --ligth-body-color: #fbfbfe;
+  --dark-main-color: #52a5e0;
+  --dark-title-color: #eff3f5;
+  --dark-text-color: #c8cdd0;
+  --dark-light-text-color: #a0a7ac;
+  --dark-border-color: #2a3b47;
+  --dark-container-color: #212e36;
+  --dark-body-color: #192229;
+}
+
+body {
+  background-color: var(--dark-body-color);
+}
+button {
+  outline: none;
+}
+button:hover {
+  opacity: 0.9;
+}
+button:active {
+  background-color: var(--ligth-main-color);
+}
+.main-calculator {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+  margin: 15% auto;
+  font-size: 24px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.screen {
+  width: 100%;
+  min-width: 130px;
+}
+.number-screen {
+  width: 100%;
+  padding: 0;
+  border: none;
+  direction: rtl;
+  border-radius: 5px;
+  background-color: var(--dark-light-text-color);
+  outline: none;
+  color: black;
+}
+.buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.num-buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+.numb-btn {
+  border: 0px;
+  border-radius: 5px;
+  min-width: 30px;
+}
+.btn-delet {
+  background-color: var(--ligth-main-color);
+  color: var(--dark-title-color);
+}
+.btn-delet:active {
+  background-color: rgb(225, 24, 24);
+}
+.operation-simbols {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 4px;
+  margin: 0 2px;
+}
+.oper-simb {
+  border: 0px;
+  border-radius: 5px;
+  min-width: 40px;
+}
