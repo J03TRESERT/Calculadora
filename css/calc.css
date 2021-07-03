@@ -31,9 +31,9 @@ button:active {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
-  height: 200px;
-  padding: 10px;
-  margin: 15% auto;
+  height: 225px;
+  padding: 5px;
+  margin: 13.5% auto;
   font-size: 24px;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -89,4 +89,7 @@ button:active {
   border: 0px;
   border-radius: 5px;
   min-width: 40px;
+}
+.By-me {
+  color: rgba(94, 177, 151, 0.9);
 }
