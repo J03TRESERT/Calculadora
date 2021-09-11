@@ -55,6 +55,13 @@ button:active {
   outline: none;
   color: black;
 }
+.historial {
+  color: var(--ligth-main-color);
+}
+.historial:active {
+  color: var(--ligth-border-color);
+  background-color: var(--ligth-main-color);
+}
 .buttons {
   width: 100%;
   display: grid;
