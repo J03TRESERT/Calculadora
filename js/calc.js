@@ -33,16 +33,16 @@ const dvd = () => (resul = Number(numberswrites) / Number(numberswrites2));
 
 let operatorequal = document.querySelector("#oper-simb-equal");
 operatorequal.addEventListener("click", () => {
-  numbscreenCache.textContent = "";
-  if (operator == "+") numbscreenCache.textContent = suma();
+  numbscreenCache.value = "";
+  if (operator == "+") numbscreenCache.value = suma();
 
-  if (operator == "-") numbscreenCache.textContent = resta();
+  if (operator == "-") numbscreenCache.value = resta();
 
-  if (operator == "*") numbscreenCache.textContent = mltp();
+  if (operator == "*") numbscreenCache.value = mltp();
 
-  if (operator == "/") numbscreenCache.textContent = dvd();
+  if (operator == "/") numbscreenCache.value = dvd();
 
-  if (numbscreenCache.textContent == "NaN") numbscreenCache.textContent = "Error";
+  if (numbscreenCache.value == "NaN") numbscreenCache.value = "Error";
 
   numbscreen.textContent = 0;
   numberswrites = "";
@@ -70,4 +70,9 @@ operbtndelet.addEventListener("click", () => {
     numbscreen.textContent = numbscreen.textContent.slice(0, -1);
   }
   if (numbscreen.textContent == "") numbscreen.textContent = 0;
+});
+
+numbscreenCache.addEventListener("click", () => {
+  numbscreen.textContent = numbscreenCache.value;
+  numberswrites = Number(numbscreenCache.value);
 });
